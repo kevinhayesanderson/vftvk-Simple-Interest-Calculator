@@ -11,3 +11,21 @@ function updateRate() {
     var rateValue = document.getElementById("rate").value;
     document.getElementById("rate_val").innerText = rateValue;
 }
+function checkData() {
+    var principal = document.getElementById("principal");
+    var result = document.getElementById("result");
+    var value = parseInt(principal.value);
+    if (principal.value == "") {
+        alert("Please enter the principal amount");
+        principal.focus();
+        result.innerHTML = "";
+        return false;
+    }
+    if (value == 0 || value < 0) {
+        alert("Enter a positive number");
+        principal.focus();
+        result.innerHTML = "";
+        return false;
+    }
+    return true;
+}
