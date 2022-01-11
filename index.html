@@ -2,48 +2,56 @@
 <html>
 
 <head>
-    <title>Simple Interest Calculator</title>
+    <title>Web App – Simple Interest Calculator</title>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <div class="maindiv">
         <h1>Simple Interest Calculator</h1>
         <form id="form1" action="" method="dialog" onsubmit="return checkData()">
-            <label for="number">Amount</label>
-            <input type="number" id="principal">
-            <br>
-            <br>
-            <label for="rate">Rate</label>
-            <input type="range" id="rate" min="1" max="20" value="default_val" onchange="updateRate()"> <span
-                id="rate_val">10.25%</span>
-            <br>
-            <br>
-            <label for="years">No. of Years</label>
-            <select id="years">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select>
-            <br>
-            <br>
-            <button type="submit" onclick="compute()">Compute Interest</button>
-            <br>
-            <br>
-            <span id="result"></span>
-            <br>
+            <table>
+                <tr>
+                    <td align="left"><label for="number">Amount</label></td>
+                    <td align="left"><input type="number" id="principal" /></td>
+                </tr>
+                <tr>
+                    <td align="left"> <label for="rate">Rate</label></td>
+                    <td align="left"><input type="range" id="rate" min="1" max="20" value="default_val"
+                            onchange="updateRate()" />
+                        <span class="atc" id="rate_val">10.25%</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left"><label for="years">No. of Years</label></td>
+                    <td align="left"><select id="years">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="centre">
+                        <button type="submit" onclick="compute()">Compute Interest</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="centre">
+                        <span id="result"></span>
+                    </td>
+                </tr>
+            </table>
         </form>
-        <footer>&#169; This Calculator belongs to Kevin Hayes Anderson.</footer>
+        <footer>&#169; Everyone Can Get Rich</footer>
     </div>
 </body>
-
 
 </html>
